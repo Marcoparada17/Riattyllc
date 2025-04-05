@@ -1,0 +1,151 @@
+.accordion-container {
+    display: flex;
+    justify-content: center; /* Centra las columnas horizontalmente */
+    gap: 8rem; /* Espacio entre las columnas */
+    padding: 3rem 7rem; /* padding uniforme */
+    box-sizing: border-box; /* Asegúrate de que el padding no exceda el ancho disponible */
+  }
+  
+  .accordion-column {
+    flex: 1; /* Cada columna toma una parte igual del espacio disponible */
+    box-sizing: border-box; /* Incluye padding y bordes en el ancho total */
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+  
+  .accordion-item {
+    background: linear-gradient(79deg, rgba(67, 127, 255, 0.95) 26%, rgba(46,53,115,1) 100%); 
+    border-radius: 15px; /* Bordes redondeados */
+    padding: 0.3rem; /* Espaciado interno */
+    margin-bottom: 1rem; /* Espacio entre acordeones */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0px 15px 10px rgba(0, 0, 0, 0.733); /* Sombra inicial */
+}
+
+/* Cambia de color cuando se hace hover */
+.accordion-item:hover {
+    background-color: rgba(230, 54, 0, 0.781); /* Un color claro semitransparente */
+    transform: scale(1.02); /* Un leve efecto de crecimiento */
+}
+
+/* Cuando el acordeón está abierto */
+.accordion-item.open {
+    background-color: rgba(255, 255, 255, 0.4); /* Un color un poco más intenso */
+}
+
+  
+  .accordion-title {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    margin: 5 1rem; /* Margen horizontal para mantener el contenido centrado */
+  }
+  
+  .accordion-content {
+    background-color: transparent;
+    margin: 10 1rem; /* Margen horizontal para el contenido */
+    padding: 0.5rem 0; /* Espaciado vertical para el contenido */
+  }
+  
+  .accordion-icon {
+    font-size: 2.5rem; /* Ajusta según necesites */
+    color: #ffffff;
+    margin-right: 1rem;
+  }
+  
+  /* Responsividad para pantallas medianas hacia arriba */
+  @media (max-width: 768px) {
+    .accordion-container {
+      flex-direction: column;
+      align-items: center; /* Centra las columnas verticalmente en modo móvil */
+      padding: 5rem 2rem; /* Reduce el padding en dispositivos más pequeños */
+      gap: 1rem; /* Reduce el espacio entre elementos en dispositivos más pequeños */
+    }
+  
+    .accordion-column {
+      margin-top: 0;
+      margin-bottom: 0;
+      /* Asegúrate de que las columnas ocupen el ancho completo disponible en móviles */
+      width: 100%;
+    }
+
+  }
+  /* Estilos para cuando el acordeón esté abierto */
+  .accordion-item.open .accordion-content {
+    display: block; /* Muestra el contenido */
+  }
+
+
+  .bg-accord {
+    background-color: #ffffff !important;
+
+}
+  
+/*
+  .bg-accord {
+    background-color: #001f61 !important;
+    background: conic-gradient(from 0deg at 50% 50%, rgba(4, 2, 29, 0.2) 0deg, rgba(42, 84, 214, 0.2) 360deg);
+
+}
+*/
+.text-color {
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.text-color1 {
+  color: #fff;
+  font-size: 18px;
+}
+
+/* Aplica bordes redondeados solo a la primera tarjeta de cada columna */
+.accordion-column .accordion-item:first-child {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+/* Aplica bordes redondeados solo a la última tarjeta de cada columna */
+.accordion-column .accordion-item:last-child {
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.faq-image {
+  width: 100%;
+  max-width: auto;
+  border-radius: 10px;
+}
+
+.faq-section {
+  width: 100%;
+  padding: 50px 0;
+  background-color: #f5f5f5;
+}
+
+/* Sección Izquierda */
+.faq-left {
+  text-align: left;
+  padding: 1.5rem;
+  margin-top: 1rem;
+}
+
+.faq-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #000000;
+  text-align: center;
+}
+
+.faq-description {
+  font-size: 1.2rem;
+  margin: 15px 0;
+  color: #000000;
+  text-align: justify;
+}
+
+.font-monserrat {
+  font-family: 'Monserrat' !important
+}

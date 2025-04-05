@@ -1,0 +1,314 @@
+ca.bg-b800 {
+background-color:#1F43B2 !important;
+
+}
+
+.bg-700 {
+  background-color: rgb(37, 157, 255) !important;
+  ;
+}
+
+.t-700 {
+  color: rgb(58, 162, 248) !important;
+  font-weight: bold !important;
+  ;
+}
+
+.bg-faq {
+  background-color: #04021D;
+  color: white;
+}
+
+.bg-dark2 {
+  background-color: #04021D;
+  color: white;
+  position: relative;
+}
+ 
+.bg-950 {
+  background-color: #172654;
+}
+
+.bg-200 {
+  background-color: #BFDCFE;
+}
+
+.t-200 {
+  color: #BFDCFE;
+}
+
+.bg-50 {
+  background-color: #EFF6FF;
+}
+
+.r-950 {
+  background-color: #4f021f;
+}
+
+.r-200 {
+  background-color: #FFCBD6;
+}
+
+.rt-200 {
+  color: #FFCBD6;
+}
+
+.r-50 {
+  background-color: #3774f8;
+} 
+.custom-navbar .navbar-brand {
+  flex-grow: 1; /* Ajusta según necesites */
+}
+
+.custom-navbar .nav-link {
+  color: #fff !important; /* Asegúrate de que los enlaces sean blancos */
+}
+
+.bg-navbar {
+  background-color: #ffffff !important;
+  
+}
+
+.bg-navbar2 {
+  background-color: #fff !important;
+  opacity: 0.8 !important;
+}
+
+.bg-cardreview {
+  background: #050223 !important;
+  opacity: 0.7 !important;
+  
+}
+
+.navbar-right {
+  margin-right: auto;
+
+}
+.home-background {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh; /* Ajusta según necesites */
+}
+
+.text-column {
+  color: white; /* Asegúrate de que el texto sea legible sobre tu imagen de fondo */
+}
+
+
+.text-font1 {
+  color: rgb(58, 162, 248) !important; /* Asegúrate de que el texto sea legible sobre tu imagen de fondo */
+}
+
+.text-font {
+  color: white !important; /* Asegúrate de que el texto sea legible sobre tu imagen de fondo */
+}
+
+.text-bold1 {
+  font-weight: bold;
+}
+
+.text-font3 {
+  color: rgb(0, 0, 0) !important; /* Asegúrate de que el texto sea legible sobre tu imagen de fondo */
+}
+
+.tr-card {
+  color: #FFCBD6, !important; /* Asegúrate de que el texto sea legible sobre tu imagen de fondo */
+}
+
+.custom-card {
+  width: 330px;
+  height: auto;
+}
+
+.degraded-background1 {
+  background-color: #ffffff;
+}
+
+
+.degraded-background {
+  background: linear-gradient(95deg, rgb(21, 37, 90) 0%, #04021D 96%);
+}
+.degraded-background3 {
+  background: linear-gradient(270deg, rgb(21, 37, 90) 0%, #04021D 96%);
+}
+
+.degraded-background2 {
+  background: linear-gradient(273deg, rgba(0,54,110,1) 0%, rgba(30,0,199,1) 18%, rgba(23,148,255,1) 69%);
+}
+
+.degraded.index {
+  background: linear-gradient(180deg, rgba(4, 2, 29, 0) 0%, #04021D 96%);
+}
+
+.step-image {
+  height: 3.5rem;
+  width: 3.5rem;
+  object-fit: contain;
+  padding-left: 30px;
+  /* Ajusta esto según tus necesidades */
+  /* width: auto; /* Esto mantiene la proporción de la imagen */
+ /*  object-fit: cover; /* Esto asegura que la imagen cubra el espacio sin distorsionarse */
+}
+
+.custom-card-body {
+  display: flex !important; 
+  flex-direction: column !important;
+  align-items: center !important;
+}
+
+
+.bg-infort {
+  
+  background: conic-gradient(from 180deg at 50% 50%, rgba(4, 2, 29, 0.2) 0deg, rgba(42, 84, 214, 0.2) 360deg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100%; /* Se asegura de que al menos tenga la altura del contenido */
+  /* demás propiedades de fondo */
+}
+
+.image-infort {
+  height: 240px;
+  width: 380px;
+  object-fit: contain;
+}
+
+.bg-ways {
+  background: rgb(0,0,0);
+background: linear-gradient(149deg, rgba(0,0,0,1) 0%, rgba(122,119,119,0.9500175070028011) 16%, rgba(177,177,177,1) 26%, rgba(33,33,33,1) 75%, rgba(1,1,1,0.8295693277310925) 100%);
+}
+
+.image-ways {
+  width: 100%;
+  max-width: 150px; /* O el tamaño que desees */
+  object-fit: contain; 
+}
+
+.font-ways {
+
+  font: 'Arimo Hebrew Subset', sans-serif
+}
+
+.bg-services {
+  
+  background: linear-gradient(180deg, rgba(4, 2, 29, 0) 0%, #04021D 100%);
+}
+
+
+.bg-cardreview-step {
+  background: linear-gradient(79deg, rgba(67, 127, 255, 0.95) 26%, rgba(46,53,115,1) 100%) !important; 
+}
+
+.hover-card {
+  transition: transform 0.3s ease-in-out; /* Transición suave */
+}
+
+.hover-card:hover {
+  transform: scale(1.05); /* Aumenta el tamaño de la card un 5% */
+}
+
+
+.goal-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.goal-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.goal-box {
+  width: 200px; /* Aumentamos el tamaño del cuadrado */
+  height: 120px; /* Reducimos la altura para que el texto no quede tan separado */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3));
+  border-radius: 10px; /* Bordes redondeados para mejor estética */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 15px;
+}
+
+.goal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.goal-number {
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 5px; /* Se reduce la separación entre el número y el texto */
+}
+
+.goal-title {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.image-circle {
+  width: 70%;
+  height: 70%;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  background: #f5f5f5;
+  box-shadow: 29px 15px 20px 12px rgba(0,0,0,0.75);
+}
+
+.image-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.info-card {
+  background: linear-gradient(79deg, rgba(67, 127, 255, 0.95) 26%, rgba(46,53,115,1) 100%); 
+  border-radius: 10px; /* Bordes redondeados para mejor estética */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 15px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.info-card:hover {
+  transform: scale(1.05);
+}
+
+/* Usar la fuente en el proyecto */
+.text-font2 {
+  font-family: 'Montserrat' !important;
+  font-weight: bold;
+}
+
+.footer-bg {
+  background-color: #000;
+}
+
+.f-logo {
+  margin-bottom: 1rem ;
+  width: auto; /* Tamaño fijo */
+  height: 200px; /* Tamaño fijo */
+  object-fit: contain;
+}
+
+.font-title {
+  font-family: 'roboto'
+}
+
+.font-monserrat {
+  font-family: 'Monserrat' !important
+}

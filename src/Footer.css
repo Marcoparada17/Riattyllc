@@ -1,0 +1,107 @@
+
+.footer {
+  color: #fff; /* Asume texto blanco */
+  background-color: #050223; /* Asume fondo oscuro */
+}
+
+
+.f-text {
+  color: #fff; /* Asume texto blanco */
+  font-size: 1rem;
+  border-bottom: 2px solid #FFF;
+  text-decoration: none; /* Elimina el subrayado */
+}
+
+.f-text2 {
+  color: #fff; /* Asume texto blanco */
+  font-size: 1rem;
+}
+
+.f-home{
+  color: #BFDCFE;
+  text-decoration: none;
+}
+
+.footer-column {
+  /* Añadir bordes y estilo según la imagen */
+  text-align: center;
+  border: 2px solid green; /* Ejemplo visual, usa el color apropiado */
+}
+
+.footer-links,
+.footer-logo-container {
+  border: 2px solid green; /* Ejemplo visual, usa el color apropiado */
+  padding: 1rem; /* Añade espaciado dentro de las columnas */
+}
+
+.footer-links a {
+  display: block; /* Los enlaces como bloque para que cada uno esté en su propia línea */
+  margin-bottom: 0.5rem; /* Espaciado entre enlaces */
+  text-decoration: none; /* Opcional: elimina el subrayado de los enlaces */
+}
+
+.footer-logo {
+  max-width: 100%; /* Asegura que el logo se ajuste al contenedor */
+  height: auto; /* Mantiene la proporción del logo */
+}
+
+.footer-bottom {
+  text-align: center; /* Centra el texto en la parte inferior del footer */
+  display: inline;
+  padding: 1rem; /* Añade espaciado */
+  margin-right: 1rem; 
+  
+}
+
+/* Para tener elementos en línea en la parte inferior del footer */
+.footer-bottom p {
+  display: inline; /* Cambia el display a inline */
+  margin-right: 1rem; /* Añade un margen a la derecha si es necesario */
+}
+
+
+.bordered-text {
+  border-bottom: 2px solid #FFF; /* Cambia #color por el color deseado */
+  border-inline-start: #FFF;
+  margin-bottom: 0.5rem; /* Espaciado debajo del texto */
+  padding-bottom: 0.25rem; /* Espaciado entre el texto y la línea de borde */
+}
+
+.b-top {
+  border-top: 2px solid #FFF; /* Cambia #color por el color deseado */
+  border-inline-start: #FFF;
+  margin-bottom: 0.5rem; /* Espaciado debajo del texto */
+  padding-bottom: 0.25rem; /* Espaciado entre el texto y la línea de borde */
+}
+
+
+/* Responsividad para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .footer-column {
+    text-align: center; /* Centra el contenido en dispositivos móviles */
+    border-bottom: 2px solid green; /* Ejemplo visual, agrega un borde al final de cada columna */
+  }
+  
+  .footer-bottom {
+    border-top: none; /* Elimina el borde superior para la fila inferior en móviles */
+  }
+}
+
+/* Asegura que el contenedor del menú esté alineado a la izquierda */
+.footer-container {
+  justify-content: flex-start !important;
+  padding-left: 5rem; /* Ajusta según necesites */
+}
+
+/* Ajusta el espaciado del menú */
+.footer-menu {
+  margin-right: auto; /* Empuja el logo a la derecha */
+}
+
+/* Línea blanca más larga */
+.footer-line {
+  width: 80%;
+  height: 2px;
+  background-color: white;
+  margin: 0.2rem auto;
+}

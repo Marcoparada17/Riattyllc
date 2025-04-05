@@ -1,0 +1,59 @@
+/* Estilos base para la versión de escritorio */
+.goal-col {
+  position: relative;
+  padding: 1rem;
+  /* Asegúrate de no añadir aquí un nuevo borde derecho si ya lo estás manejando con ::after */
+}
+
+/* Ajusta según tu implementación existente para el borde derecho */
+.goal-col::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 2px; /* Ancho del borde */
+  height: 50%; /* Ajustado para ocupar solo el 75% de la altura de la columna */
+  background-color: white;
+}
+
+/* Para el número y el título, no necesitan cambios específicos aquí */
+.goal-number {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 5rem;
+}
+
+.goal-title {
+  margin-top: 1.5rem;
+  font-size: 1.5rem;
+  margin-bottom: 5rem;
+}
+
+/* Estilos específicos para dispositivos móviles */
+@media (max-width: 768px) {
+  .goal-col {
+    border-right: none; /* Asegura eliminar el borde derecho */
+    border-bottom: 2px solid white; /* Borde inferior para separar elementos */
+    padding-bottom: 1rem; /* Espacio para el borde inferior */
+    margin-bottom: 1rem; /* Espacio adicional debajo de la columna */
+    flex-basis: 100%; /* Las columnas toman el ancho completo */
+  }
+
+  .goal-col::after {
+    content: none; /* Elimina el pseudo-elemento para la versión móvil */
+  }
+
+  /* Ajustando el ancho del borde inferior al 75% */
+  .goal-row {
+    width: 70%;
+    margin: auto; /* Centra la fila en la página */
+  }
+}
+
+/* Remover el borde del último elemento tanto en móvil como en escritorio */
+.goal-col:last-child::after,
+.goal-col:last-child {
+  border-bottom: none; /* Esto aplica a móvil donde usamos border-bottom */
+  content: none; /* Esto aplica a la versión de escritorio con el pseudo-elemento */
+}

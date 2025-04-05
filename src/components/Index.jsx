@@ -1,0 +1,101 @@
+import React from 'react';
+import { Row, Col, Card, Form, Button } from 'react-bootstrap';
+import { useTranslation } from 'react-i18next';
+
+const Cotizar = () => {
+  const { t } = useTranslation();
+
+  return ( 
+    <div id='home' className='bg-home' style={{
+      backgroundImage: 'linear-gradient(180deg, rgba(4, 2, 29, 0) 0%,rgb(34, 27, 124) 96%), url("/images/bgpick.png")', 
+      backgroundPosition: 'center',
+      backgroundSize: 'cover',
+      backgroundRepeat: 'no-repeat',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      width: 'auto',
+      height: 'auto',
+      margin: 0,
+      padding: 0
+    }}>
+      <Row className="d-flex align-items-center g-0" style={{ width: '90%' }}> 
+        <Col md={6} className="px-5">
+          <h1 style={{
+            fontFamily: 'Libre Franklin, sans-serif',
+            fontWeight: 700,
+            fontSize: '2.5rem',
+            lineHeight: '1em',
+            color: '#FFFFFF',
+            position: 'relative',
+            zIndex: 2,
+            marginTop: '8rem',
+            textAlign: 'center'
+          }}>
+            {t("cotizar.titulo")}
+          </h1>
+          <p style={{
+            fontSize: '1.5rem',
+            lineHeight: '1.2em',
+            fontWeight: 'normal',
+            color: '#FFFFFF',
+            position: 'relative',
+            zIndex: 2,
+            marginTop: '20px',
+            textAlign: 'center'
+          }}>
+            {t("cotizar.subtitulo")}
+          </p>
+        </Col>
+        <Col md={6} className="p-5 ">
+          <Card style={{ minHeight: '500px', padding: '20px', borderRadius: '15px', boxShadow: '0 4px 8px rgba(0,0,0,0.2)' }}>
+            <Card.Body>
+              <Card.Title className="text-center font-monserrat" style={{ fontSize: '1.8rem', fontWeight: 'bold' }}>
+                {t("cotizar.formulario.titulo")}
+              </Card.Title>
+              <Form>
+                <Form.Group controlId="envioDesde" className="mb-3">
+                  <Form.Label>{t("cotizar.formulario.envioDesde")}</Form.Label>
+                  <Form.Control type="text" placeholder={t("cotizar.formulario.placeholderDesde")} />
+                </Form.Group>
+
+                <Form.Group controlId="envioHasta" className="mb-3">
+                  <Form.Label>{t("cotizar.formulario.envioHasta")}</Form.Label>
+                  <Form.Control type="text" placeholder={t("cotizar.formulario.placeholderHasta")} />
+                </Form.Group>
+
+                <Form.Group controlId="correo" className="mb-3">
+                  <Form.Label>{t("cotizar.formulario.correo")}</Form.Label>
+                  <Form.Control type="email" placeholder={t("cotizar.formulario.placeholderCorreo")} />
+                </Form.Group>
+
+                <Form.Group controlId="numeroContacto" className="mb-3">
+                  <Form.Label>{t("cotizar.formulario.numeroContacto")}</Form.Label>
+                  <Form.Control type="tel" placeholder={t("cotizar.formulario.placeholderNumero")} />
+                </Form.Group>
+
+                <Form.Group controlId="vehiculo" className="mb-3">
+                  <Form.Label>{t("cotizar.formulario.vehiculo")}</Form.Label>
+                  <Form.Control type="text" placeholder={t("cotizar.formulario.placeholderVehiculo")} />
+                </Form.Group>
+
+                <Form.Group controlId="anio" className="mb-3">
+                  <Form.Label>{t("cotizar.formulario.anio")}</Form.Label>
+                  <Form.Control type="number" placeholder={t("cotizar.formulario.placeholderAnio")} />
+                </Form.Group>
+
+                <div className="text-center">
+                  <Button variant="primary" type="submit" style={{ width: '100%', fontSize: '1.2rem' }}>
+                    {t("cotizar.formulario.boton")}
+                  </Button>
+                </div>
+              </Form>
+            </Card.Body>
+          </Card>
+        </Col>
+      </Row>
+    </div>
+  );
+};
+
+export default Cotizar;
