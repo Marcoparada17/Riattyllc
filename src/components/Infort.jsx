@@ -18,7 +18,7 @@ const Infort = () => {
         {/* Columna izquierda con la imagen en círculo */}
         <Col md={6} className="text-center">
           <div className="image-circle mb-4">
-            <img src="/images/infort.png" alt="Transporte" className="img-fluid"/>
+            <img src="/images/infort.jpg" alt="Transporte" className="img-fluid"/>
           </div>
         </Col>
 

@@ -5,7 +5,7 @@ const resources = {
   en: {
     translation: {
       "navbar": {
-        "services": "Services",
+        "about": "About us",
         "terms": "Terms",
         "faq": "FAQ",
         "contact": "Contact",
@@ -156,7 +156,7 @@ const resources = {
   es: {
     translation: {
       "navbar": {
-        "services": "Servicios",
+        "about": "Nosotros",
         "terms": "Términos",
         "faq": "FAQ",
         "contact": "Contacto",

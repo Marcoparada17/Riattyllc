@@ -23,7 +23,6 @@ const AccordionComponent = () => {
 
   // Preguntas adicionales con acordeón en la izquierda
   const extraQuestions = [
-    { title: t('faq.q10'), content: t('faq.a10') },
     { title: t('faq.q11'), content: t('faq.a11') },
     { title: t('faq.q12'), content: t('faq.a12') },
     { title: t('faq.q13'), content: t('faq.a13') },
@@ -42,7 +41,7 @@ const AccordionComponent = () => {
   };
 
   return (
-    <div className="faq-section p-4">
+    <div className="faq-section p-4" id="faq">
       <Row>
         {/* Sección Izquierda */}
         <Col md={6} className="faq-left">
@@ -68,7 +67,7 @@ const AccordionComponent = () => {
 
           {/* Imagen con animación */}
           <motion.img
-            src="/images/faqs.png"
+            src="/images/faqs.jpg"
             alt="FAQ"
             className="faq-image"
             initial={{ x: -100, opacity: 0 }}

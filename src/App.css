@@ -256,7 +256,7 @@ background: linear-gradient(149deg, rgba(0,0,0,1) 0%, rgba(122,119,119,0.9500175
 .image-circle {
   width: 70%;
   height: 70%;
-  border-radius: 50%;
+  border-radius: 100%;
   overflow: hidden;
   display: flex;
   justify-content: center;

@@ -65,10 +65,10 @@ function NavbarComp() {
               </Dropdown.Menu>
             </Dropdown>
 
-            <Nav.Link href="/servicios" className='text-font1 me-4'>{t('navbar.services')}</Nav.Link>
-            <Nav.Link href="/terminos" className='text-font1 me-4'>{t('navbar.terms')}</Nav.Link>
-            <Nav.Link href="/faq" className='text-font1 me-4'>{t('navbar.faq')}</Nav.Link>
-            <Nav.Link href="/contact" className='text-font1 me-4'>{t('navbar.contact')}</Nav.Link>
+            <Nav.Link href="#aboutus" className='text-font1 me-4'>{t('navbar.about')}</Nav.Link>
+            <Nav.Link href="/terms" className='text-font1 me-4'>{t('navbar.terms')}</Nav.Link>
+            <Nav.Link href="#faq" className='text-font1 me-4'>{t('navbar.faq')}</Nav.Link>
+            <Nav.Link href="#contact" className='text-font1 me-4'>{t('navbar.contact')}</Nav.Link>
 
             <Button variant="outline-light" style={{ backgroundColor: 'rgb(58, 162, 248)', borderColor: '#1F43B2' }}>
               {t('navbar.quote')}

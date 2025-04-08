@@ -7,7 +7,7 @@ const Cotizar = () => {
 
   return ( 
     <div id='home' className='bg-home' style={{
-      backgroundImage: 'linear-gradient(180deg, rgba(4, 2, 29, 0) 0%,rgb(34, 27, 124) 96%), url("/images/bgpick.png")', 
+      backgroundImage: 'linear-gradient(180deg, rgba(4, 2, 29, 0) 0%,rgb(34, 27, 124) 96%), url("/images/bgpick.jpg")', 
       backgroundPosition: 'center',
       backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat',
