@@ -100,7 +100,7 @@ const Step = () => {
                     zIndex: 3,
                     transition: 'all 0.5s ease-in-out'
                   }}>
-                    <span className="text-black bg-white p-2 rounded" style={{
+                    <span className="text-font3 bg-white p-2 rounded" style={{
                       display: 'inline-block',
                       padding: '8px 20px',
                       fontSize: '1.2rem',
@@ -147,7 +147,7 @@ const Step = () => {
           ))}
         </Carousel>
 
-        <Button className="white-btn font-f mt-4 mb-2" style={{ 
+        <Button className="white-btn text-font3 mt-4 mb-2" style={{ 
           width: 'auto',
           padding: '10px 30px',
           fontSize: '1.1rem',

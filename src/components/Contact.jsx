@@ -6,9 +6,9 @@ const Contacto = () => {
   const { t } = useTranslation();
 
   return (
-    <div id='contact' className="bg-dark2 d-none d-md-block"> 
-      <Row className="justify-content-center p-3 g-0">
-        <Col md={10} className="text-center">
+    <div id='contact' className="bg-dark2 d-none d-md-block "> 
+      <Row className="justify-content-center p-3 g-0 ">
+        <Col md={10} className="text-center mt-3">
           <h2 style={{ fontFamily: 'Inter' }}>
             <span className='t-700 '>{t("contacto.titulo")}</span>  
             <p>{t("contacto.descripcion")}</p>

@@ -10,7 +10,7 @@ const Infort = () => {
     <div className="container py-5">
       <Row className="justify-content-center text-center mb-4">
         <Col md={8}>
-          <h1 className='font-inter display-5'>{t("infort.titulo")}</h1>          
+          <h1 className='font-inter text-bold1 '>{t("infort.titulo")}</h1>          
         </Col>
       </Row>
 
