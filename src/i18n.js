@@ -152,6 +152,39 @@ const resources = {
     "benefit4": "24/7 customer support throughout transport"
   },
 
+"privacy": {
+  "title": "Privacy Policy",
+  "updated": "Last updated: April 10, 2025",
+  "intro": "This Privacy Policy explains how Riatty LLC collects, uses, and protects your information when using our services.",
+  "usage": "By using our website or services, you agree to the terms of this privacy policy.",
+  "section1": {
+    "title": "Interpretation and Definitions",
+    "definition": "Terms used in this policy have meanings defined under specific conditions and apply equally to both singular and plural forms."
+  },
+  "section2": {
+    "title": "Collected Data",
+    "point1": "Email address, name, phone number, address, and postal code.",
+    "point2": "Usage data including browser type, visit duration, and pages visited.",
+    "point3": "Mobile data like device type, OS, and IP address."
+  },
+  "data": {
+    "title": "Use of Your Personal Data",
+    "description": "We use your data to manage your account, process transactions, provide updates, and improve our services."
+  },
+  "cookies": {
+    "title": "Cookies and Tracking",
+    "description": "We use cookies to enhance user experience and analyze site usage. You may refuse cookies in your browser settings."
+  },
+  "security": {
+    "title": "Security",
+    "text": "We strive to protect your data, but no method is 100% secure. We use best practices to secure your information."
+  },
+  "contact": {
+    "title": "Contact Us"
+  }
+},
+
+
     }
   },
   es: {
@@ -304,6 +337,40 @@ const resources = {
     "benefit3": "Seguro completo para su tranquilidad",
     "benefit4": "Soporte al cliente 24/7 durante todo el transporte"
   },
+
+"privacy": {
+  "title": "Política de Privacidad",
+  "updated": "Última actualización: 10 de abril de 2025",
+  "intro": "Esta Política de Privacidad explica cómo Riatty LLC recopila, utiliza y protege su información al usar nuestros servicios.",
+  "usage": "Al utilizar nuestro sitio web o servicios, usted acepta los términos de esta política de privacidad.",
+  "section1": {
+    "title": "Interpretación y Definiciones",
+    "definition": "Los términos utilizados en esta política tienen significados definidos bajo condiciones específicas y se aplican tanto en singular como en plural."
+  },
+  "section2": {
+    "title": "Datos Recopilados",
+    "point1": "Dirección de correo, nombre, número telefónico, dirección y código postal.",
+    "point2": "Datos de uso como tipo de navegador, duración de la visita y páginas visitadas.",
+    "point3": "Datos móviles como tipo de dispositivo, sistema operativo e IP."
+  },
+  "data": {
+    "title": "Uso de sus Datos Personales",
+    "description": "Usamos sus datos para gestionar su cuenta, procesar transacciones, brindar actualizaciones y mejorar nuestros servicios."
+  },
+  "cookies": {
+    "title": "Cookies y Seguimiento",
+    "description": "Usamos cookies para mejorar la experiencia del usuario y analizar el uso del sitio. Puede rechazar las cookies desde su navegador."
+  },
+  "security": {
+    "title": "Seguridad",
+    "text": "Nos esforzamos por proteger su información, pero ningún método es 100% seguro. Usamos las mejores prácticas para mantener su información segura."
+  },
+  "contact": {
+    "title": "Contáctanos"
+  }
+},
+
+
 
     }
   }

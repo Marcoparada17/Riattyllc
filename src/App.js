@@ -14,6 +14,7 @@ import FooterMobile from './components/FooterMobile'
 import Gracias from './components/Gracias';
 import TermsConditions from './components/TermsConditions'
 import AboutUs from './components/About';
+import PrivacyPolicy from './components/Politics';
 import './i18n'; // Importa la configuración de idiomas
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
@@ -40,6 +41,7 @@ function App() {
           <Route path="#contact" element={<Contacto />} />
           <Route path='/gracias' element={<Gracias/>}/>
           <Route path='/terms' element={<TermsConditions/>}/>
+          <Route path='/privacy' element={<PrivacyPolicy/>}/>
       </Routes>
       <Footer/>
       <FooterMobile/>

@@ -75,6 +75,7 @@ const Footer = () => {
             <div>Llámanos al <a href='tel:+1000000000' className='text-white text-decoration-underline'>(1) 000-000-000</a></div>
             <div><a href='mailto:Soporte@RiattyLLC.com' className='text-white text-decoration-underline'>Soporte@RiattyLLC.com</a></div>
             <div>©2025 Riatty LLC</div>
+            <div><a href='/privacy' className='text-white text-decoration-underline'>Privacy Policy</a></div>
             
           </Col>
         </Row>
