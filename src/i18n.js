@@ -90,10 +90,11 @@ const resources = {
       "footer" :{
         "cotiza":"Get a quote",
         "terms": "Terms&Conditions",
+        "description": "Reliable and affordable vehicle shipping solutions tailored for individuals and businesses throughout the United States"
       },
 
       "faq": {
-    "title": "Frequently Asked Questions",
+    "title": "FAQ'S",
     "description": "In our Frequently Asked Questions section, we've compiled the most comprehensive and clear answers to any questions you may have about our vehicle shipping services.",
     "q1": "What happens if I cancel?",
     "a1": "You can cancel at any time before your vehicle is picked up. If you cancel prior to the assignment of a carrier, you will be charged a $25 dispatch fee. If you cancel after a carrier has been assigned, you will be charged only the amount of the initial payment.",
@@ -241,10 +242,11 @@ const resources = {
       "footer" :{
         "cotiza":"Cotiza",
         "terms": "Terminos&Condiciones",
+        "description": "Soluciones confiables y accesibles para el transporte de vehículos, diseñadas para clientes particulares y empresas en todo Estados Unidos."
       },
 
       "faq": {
-    "title": "Preguntas Frecuentes",
+    "title": "FAQ'S",
     "description": "En nuestra sección de Preguntas Frecuentes, hemos recopilado las respuestas más completas y claras para las dudas que puedas tener sobre nuestros servicios de envío de vehículos.",
     "q1": "¿Qué sucede si cancelo?",
     "a1": "Puedes cancelar en cualquier momento antes de que recojan tu vehículo. Si cancelas antes de la asignación de un transportista, se te cobrará una tarifa de despacho de $25. Si cancelas después de que se haya asignado un transportista, solo se te cobrará el monto del pago inicial.",

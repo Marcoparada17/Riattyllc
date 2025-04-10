@@ -263,7 +263,7 @@ background: linear-gradient(149deg, rgba(0,0,0,1) 0%, rgba(122,119,119,0.9500175
   align-items: center;
   margin: auto;
   background: #f5f5f5;
-  box-shadow: 29px 15px 20px 12px rgba(0,0,0,0.75);
+  box-shadow: 7px 18px 8px 3px rgba(0,0,0,0.75);
 }
 
 .image-circle img {
@@ -273,7 +273,7 @@ background: linear-gradient(149deg, rgba(0,0,0,1) 0%, rgba(122,119,119,0.9500175
 }
 
 .info-card {
-  background: linear-gradient(79deg, rgba(67, 127, 255, 0.95) 26%, rgba(46,53,115,1) 100%); 
+  background: linear-gradient(79deg, rgba(13, 110, 253, 0.95) 26%, rgba(4,2,29,1) 100%); 
   border-radius: 10px; /* Bordes redondeados para mejor estética */
   display: flex;
   flex-direction: column;
@@ -311,4 +311,31 @@ background: linear-gradient(149deg, rgba(0,0,0,1) 0%, rgba(122,119,119,0.9500175
 
 .font-monserrat {
   font-family: 'Monserrat' !important
+}
+
+.white-btn {
+  background-color: white !important; /* Fondo blanco */
+  color: black !important; /* Texto negro */
+  border: 2px solid black !important; /* Borde negro */
+  padding: 10px 20px !important; /* Espaciado interno */
+  font-size: 16px !important; /* Tamaño de texto */
+  font-weight: bold !important; /* Negrita */
+  border-radius: 5px !important; /* Esquinas redondeadas */
+  cursor: pointer !important; /* Cursor tipo "mano" */
+  transition: all 0.3s ease; /* Transición suave */
+}
+
+/* Efecto al pasar el mouse */
+.white-btn:hover {
+  background-color: black !important; /* Fondo negro */
+  color: white !important; /* Texto blanco */
+}
+
+
+.text-justify-custom {
+  text-align: justify;
+}
+
+.font-inter {
+  font-family: 'Inter' !important;
 }

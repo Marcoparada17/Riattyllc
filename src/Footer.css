@@ -100,8 +100,63 @@
 
 /* Línea blanca más larga */
 .footer-line {
-  width: 80%;
+  width: 97%;
   height: 2px;
   background-color: white;
   margin: 0.2rem auto;
+}
+
+
+.footer-bg {
+  background-color: #01122c;
+  color: white;
+}
+
+.f-logo {
+  width: 70%;
+  align-items: center;
+}
+
+
+
+.footer-description {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  font-style: italic;
+}
+
+.footer-line {
+  border-top: 1px solid #ccc;
+}
+
+.f-text, .f-text2 {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.f-text:hover {
+  color: #0D6EFD;
+}
+
+.contact-button {
+  border: 2px solid #0D6EFD;
+  border-radius: 25px;
+  color: #0D6EFD;
+  display: inline-block;
+  margin-bottom: 10px;
+  transition: background 0.3s;
+}
+
+.contact-button:hover {
+  background: #0D6EFD;
+  color: #FFF;
+}
+
+.footer-icon {
+  width: 1.2rem;
+  transition: color 0.3s;
+}
+
+.footer-icon:hover {
+  color: #0D6EFD;
 }

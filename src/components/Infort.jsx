@@ -10,13 +10,13 @@ const Infort = () => {
     <div className="container py-5">
       <Row className="justify-content-center text-center mb-4">
         <Col md={8}>
-          <h1 className='font-title display-5'>{t("infort.titulo")}</h1>          
+          <h1 className='font-inter display-5'>{t("infort.titulo")}</h1>          
         </Col>
       </Row>
 
       <Row className="align-items-center">
         {/* Columna izquierda con la imagen en círculo */}
-        <Col md={6} className="text-center">
+        <Col md={6} className="text-center font-title mb-2">
           <div className="image-circle mb-4">
             <img src="/images/infort.jpg" alt="Transporte" className="img-fluid"/>
           </div>

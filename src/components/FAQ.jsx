@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Row, Col } from 'react-bootstrap';
-import { motion } from 'framer-motion'; // Animaciones
 import '../AccordionComponent.css';
 
 const AccordionComponent = () => {
   const { t } = useTranslation();
 
-  // Preguntas frecuentes para la sección derecha
-  const accordionData = [
+  const allQuestions = [
     { title: t('faq.q1'), content: t('faq.a1') },
     { title: t('faq.q2'), content: t('faq.a2') },
     { title: t('faq.q3'), content: t('faq.a3') },
@@ -19,101 +17,58 @@ const AccordionComponent = () => {
     { title: t('faq.q8'), content: t('faq.a8') },
     { title: t('faq.q9'), content: t('faq.a9') },
     { title: t('faq.q10'), content: t('faq.a10') },
-  ];
-
-  // Preguntas adicionales con acordeón en la izquierda
-  const extraQuestions = [
     { title: t('faq.q11'), content: t('faq.a11') },
     { title: t('faq.q12'), content: t('faq.a12') },
-    { title: t('faq.q13'), content: t('faq.a13') },
   ];
 
-  // Estado para controlar los ítems abiertos
-  const [openIndexRight, setOpenIndexRight] = useState(null);
+  const leftQuestions = allQuestions.slice(0, 6);
+  const rightQuestions = allQuestions.slice(6);
+
   const [openIndexLeft, setOpenIndexLeft] = useState(null);
-
-  const toggleAccordionRight = (index) => {
-    setOpenIndexRight(openIndexRight === index ? null : index);
-  };
-
-  const toggleAccordionLeft = (index) => {
-    setOpenIndexLeft(openIndexLeft === index ? null : index);
-  };
+  const [openIndexRight, setOpenIndexRight] = useState(null);
 
   return (
-    <div className="faq-section p-4" id="faq">
+    <div
+      className="faq-section text-white px-5"
+      id="faq"
+      style={{
+        backgroundImage: "url('/images/faqs.jpg')",
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        width: '100%',
+      }}
+    >
       <Row>
-        {/* Sección Izquierda */}
-        <Col md={6} className="faq-left">
-          {/* Título animado */}
-          <motion.h2
-            className="faq-title font-monserrat"
-            initial={{ x: -100, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1 }}
-          >
-            {t('faq.title')}
-          </motion.h2>
+        <h2 className="faq-title font-inter text-white">{t('faq.title')}</h2>
 
-          {/* Descripción */}
-          <motion.p
-            className="faq-description"
-            initial={{ x: -100, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1, delay: 0.2 }}
-          >
-            {t('faq.description')}
-          </motion.p>
-
-          {/* Imagen con animación */}
-          <motion.img
-            src="/images/faqs.jpg"
-            alt="FAQ"
-            className="faq-image"
-            initial={{ x: -100, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1, delay: 0.4 }}
-          />
-
-          {/* Acordeón de Preguntas Adicionales (debajo de la imagen) */}
-          <motion.div
-            className="accordion-column mt-4"
-            initial={{ y: 50, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 1 }}
-          >
-            {extraQuestions.map((item, index) => (
-              <div key={index} className={`accordion-item ${openIndexLeft === index ? 'open' : ''}`}>
-                <div className="accordion-title text-color ms-4" onClick={() => toggleAccordionLeft(index)}>
-                  {item.title}
-                  <span className="accordion-icon ms-4">{openIndexLeft === index ? '-' : '+'}</span>
-                </div>
-                {openIndexLeft === index && (
-                  <div className="accordion-content text-color1 p-4">{item.content}</div>
-                )}
+        {/* Columna Izquierda */}
+        <Col md={6} className="accordion-column px-4">
+          {leftQuestions.map((item, index) => (
+            <div key={index} className={`accordion-item ${openIndexLeft === index ? 'open' : ''}`}>
+              <div className="accordion-title ms-3" onClick={() => setOpenIndexLeft(openIndexLeft === index ? null : index)}>
+                {item.title}
+                <span className="accordion-icon">{openIndexLeft === index ? '-' : '+'}</span>
               </div>
-            ))}
-          </motion.div>
+              {openIndexLeft === index && (
+                <div className="accordion-content ms-3">{item.content}</div>
+              )}
+            </div>
+          ))}
         </Col>
 
-        {/* Sección Derecha - Acordeón Principal */}
-        <Col md={6} className="accordion-column">
-          {accordionData.map((item, index) => (
-            <motion.div
-              key={index}
-              className={`accordion-item ${openIndexRight === index ? 'open' : ''}`}
-              initial={{ x: 100, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ duration: 1, delay: 0.2 * index }}
-            >
-              <div className="accordion-title text-color ms-4" onClick={() => toggleAccordionRight(index)}>
+        {/* Columna Derecha */}
+        <Col md={6} className="accordion-column px-4">
+          {rightQuestions.map((item, index) => (
+            <div key={index} className={`accordion-item ${openIndexRight === index ? 'open' : ''}`}>
+              <div className="accordion-title ms-3" onClick={() => setOpenIndexRight(openIndexRight === index ? null : index)}>
                 {item.title}
                 <span className="accordion-icon">{openIndexRight === index ? '-' : '+'}</span>
               </div>
               {openIndexRight === index && (
-              <div className="accordion-content text-color1 p-4">{item.content}</div>
+                <div className="accordion-content ms-3">{item.content}</div>
               )}
-            </motion.div>
+            </div>
           ))}
         </Col>
       </Row>

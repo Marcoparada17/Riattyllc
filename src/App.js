@@ -32,9 +32,8 @@ function App() {
             <Contacto/>
             <Goal/>
             <Step/>
-
-            <Ways/>
             <AccordionComponent/>
+            <Ways/>
           </>} />
           <Route path="#home" element={<Index />} />
           <Route path="#Review" element={<Review />} />

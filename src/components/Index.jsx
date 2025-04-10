@@ -7,7 +7,7 @@ const Cotizar = () => {
 
   return ( 
     <div id='home' className='bg-home' style={{
-      backgroundImage: 'linear-gradient(180deg, rgba(4, 2, 29, 0) 0%,rgb(34, 27, 124) 96%), url("/images/bgpick.jpg")', 
+      backgroundImage: 'linear-gradient(180deg, rgba(4, 2, 29, 0) 0%,rgb(4, 2, 29) 96%), url("/images/bgpick.jpg")', 
       backgroundPosition: 'center',
       backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat',
@@ -22,7 +22,7 @@ const Cotizar = () => {
       <Row className="d-flex align-items-center g-0" style={{ width: '90%' }}> 
         <Col md={6} className="px-5">
           <h1 style={{
-            fontFamily: 'Libre Franklin, sans-serif',
+            fontFamily: 'Inter',
             fontWeight: 700,
             fontSize: '2.5rem',
             lineHeight: '1em',
@@ -50,7 +50,7 @@ const Cotizar = () => {
         <Col md={6} className="p-5 ">
           <Card style={{ minHeight: '500px', padding: '20px', borderRadius: '15px', boxShadow: '0 4px 8px rgba(0,0,0,0.2)' }}>
             <Card.Body>
-              <Card.Title className="text-center font-monserrat" style={{ fontSize: '1.8rem', fontWeight: 'bold' }}>
+              <Card.Title className="text-center font-inter" style={{ fontSize: '1.8rem', fontWeight: 'bold' }}>
                 {t("cotizar.formulario.titulo")}
               </Card.Title>
               <Form>

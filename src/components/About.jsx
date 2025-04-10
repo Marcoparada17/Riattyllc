@@ -9,7 +9,7 @@ const AboutUs = () => {
     <Container className="my-5" id="aboutus">
       <Row className="mb-4">
         <Col>
-          <h1 className="display-4 text-center font-title">{t('aboutUs.title')}</h1>
+          <h1 className="display-4 text-center font-inter">{t('aboutUs.title')}</h1>
         </Col>
       </Row>
       
@@ -26,11 +26,11 @@ const AboutUs = () => {
         
         <Col md={6}>
           <div className="p-4 bg-light rounded shadow-sm">
-            <h2 className="mb-4">{t('aboutUs.subtitle')}</h2>
-            <p className="lead">{t('aboutUs.intro')}</p>
-            <p>{t('aboutUs.description1')}</p>
-            <p>{t('aboutUs.description2')}</p>
-            <p className="font-weight-bold">{t('aboutUs.mission')}</p>
+            <h2 className="mb-4 ">{t('aboutUs.subtitle')}</h2>
+            <p className="lead text-justify-custom">{t('aboutUs.intro')}</p>
+            <p className='text-justify-custom'>{t('aboutUs.description1')}</p>
+            <p className='text-justify-custom'>{t('aboutUs.description2')}</p>
+            <p className="font-weight-bold text-justify-custom ">{t('aboutUs.mission')}</p>
           </div>
         </Col>
       </Row>

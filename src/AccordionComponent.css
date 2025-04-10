@@ -14,7 +14,8 @@
   }
   
   .accordion-item {
-    background: linear-gradient(79deg, rgba(67, 127, 255, 0.95) 26%, rgba(46,53,115,1) 100%); 
+    background: linear-gradient(79deg, rgba(13, 110, 253, 0.95) 26%, rgba(4,2,29,1) 100%);
+   /* background: linear-gradient(79deg, rgba(67, 127, 255, 0.95) 26%, rgba(46,53,115,1) 100%); */ 
     border-radius: 15px; /* Bordes redondeados */
     padding: 0.3rem; /* Espaciado interno */
     margin-bottom: 1rem; /* Espacio entre acordeones */
@@ -114,7 +115,7 @@
 }
 
 .faq-image {
-  width: 100%;
+  width: 80%;
   max-width: auto;
   border-radius: 10px;
 }
@@ -133,19 +134,23 @@
 }
 
 .faq-title {
-  font-size: 2rem;
+  font-size: 4rem;
   font-weight: bold;
-  color: #000000;
   text-align: center;
 }
 
 .faq-description {
   font-size: 1.2rem;
   margin: 15px 0;
+  padding-left: 3rem;
+  padding-right: 3rem;
   color: #000000;
   text-align: justify;
 }
 
 .font-monserrat {
   font-family: 'Monserrat' !important
+}
+.font-inter {
+  font-family: 'Inter' !important;
 }

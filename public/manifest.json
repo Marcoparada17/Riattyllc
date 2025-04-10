@@ -1,19 +1,19 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Riatty LLC",
+  "name": "Your Best Choise for move your car",
   "icons": [
     {
-      "src": "./image/riatty.png",
+      "src": "logo.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "./image/riatty.png",
+      "src": "./images/logo.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "./image/riatty.png",
+      "src": "./images/logo2.png",
       "type": "image/png",
       "sizes": "512x512"
     }

@@ -7,12 +7,12 @@ const Contacto = () => {
 
   return (
     <div id='contact' className="bg-dark2 d-none d-md-block"> 
-      <Row className="justify-content-center py-5 g-0">
+      <Row className="justify-content-center p-3 g-0">
         <Col md={10} className="text-center">
-          <h1 style={{ fontFamily: 'Libre Franklin' }}>
-            <span className='t-700 py-5'>{t("contacto.titulo")}</span>  
+          <h2 style={{ fontFamily: 'Inter' }}>
+            <span className='t-700 '>{t("contacto.titulo")}</span>  
             <p>{t("contacto.descripcion")}</p>
-          </h1>
+          </h2>
           <div className="my-4">
             {/* Botón con color definido en CSS */}
             <Button variant="outline-secondary custom-color-btn font-f">

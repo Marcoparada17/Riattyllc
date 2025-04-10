@@ -37,7 +37,7 @@ const Review = () => {
 
       <Row className="d-flex justify-content-center p-5 text-font " style={{ position: "relative", zIndex: 2 }}>
         <Col>
-          <h2 className="text-center fw-bold font-title">{t("review.titulo")}</h2>
+          <h2 className="text-center fw-bold font-inter">{t("review.titulo")}</h2>
         </Col>
       </Row>
 
