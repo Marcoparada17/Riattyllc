@@ -34,6 +34,7 @@ const PrivacyPolicy = () => {
 
         <h3 className="text-lg font-semibold mt-4">{t('privacy.contact.title')}</h3>
         <ul className="list-disc ps-5">
+          <li>More Information Click<a href='https://www.privacypolicies.com/live/c885cea5-86dd-4da9-99f8-b6d6e6ece716'> Here</a></li>
           <li>Email: info@riatty.com</li>
           <li>Website: <a href="https://www.riatty.com" className="text-primary" target="_blank" rel="noreferrer">www.riatty.com</a></li>
         </ul>
