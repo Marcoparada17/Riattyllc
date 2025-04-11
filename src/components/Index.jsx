@@ -1,9 +1,41 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Row, Col, Card, Form, Button } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
 
 const Cotizar = () => {
   const { t } = useTranslation();
+  const desdeInputRef = useRef(null);
+  const hastaInputRef = useRef(null);
+
+  useEffect(() => {
+    // Initialize Google Places Autocomplete for both fields
+    if (window.google && window.google.maps) {
+      const desdeAutocomplete = new window.google.maps.places.Autocomplete(desdeInputRef.current);
+      const hastaAutocomplete = new window.google.maps.places.Autocomplete(hastaInputRef.current);
+
+      // Set bounds to USA
+      const bounds = new window.google.maps.LatLngBounds(
+        new window.google.maps.LatLng(24.396308, -125.000000),
+        new window.google.maps.LatLng(49.384358, -66.934570)
+      );
+
+      desdeAutocomplete.setBounds(bounds);
+      hastaAutocomplete.setBounds(bounds);
+
+      // Add event listeners to get the selected place
+      desdeAutocomplete.addListener('place_changed', () => {
+        const place = desdeAutocomplete.getPlace();
+        // formatted_address
+        console.log(place.formatted_address);
+      });
+
+      hastaAutocomplete.addListener('place_changed', () => {
+        const place = hastaAutocomplete.getPlace();
+        // formatted_address
+        console.log(place.formatted_address);
+      });
+    }
+  }, []);
 
   return ( 
     <div id='home' className='bg-home' style={{
@@ -56,12 +88,22 @@ const Cotizar = () => {
               <Form>
                 <Form.Group controlId="envioDesde" className="mb-3">
                   <Form.Label>{t("cotizar.formulario.envioDesde")}</Form.Label>
-                  <Form.Control type="text" placeholder={t("cotizar.formulario.placeholderDesde")} />
+                  <Form.Control 
+                    ref={desdeInputRef}
+                    type="text" 
+                    placeholder={t("cotizar.formulario.placeholderDesde")} 
+                    autoComplete="off"
+                  />
                 </Form.Group>
 
                 <Form.Group controlId="envioHasta" className="mb-3">
                   <Form.Label>{t("cotizar.formulario.envioHasta")}</Form.Label>
-                  <Form.Control type="text" placeholder={t("cotizar.formulario.placeholderHasta")} />
+                  <Form.Control 
+                    ref={hastaInputRef}
+                    type="text" 
+                    placeholder={t("cotizar.formulario.placeholderHasta")} 
+                    autoComplete="off"
+                  />
                 </Form.Group>
 
                 <Form.Group controlId="correo" className="mb-3">
