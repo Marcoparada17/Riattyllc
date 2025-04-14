@@ -79,14 +79,14 @@ const Cotizar = () => {
       </Col>
 
       {/* Formulario a la derecha */}
-      <Col xs={12} md={6} className="px-3 px-md-5">
+      <Col xs={12} md={6} className="px-3 px-md-2">
         <Card
           style={{
             padding: '20px',
             borderRadius: '15px',
             boxShadow: '0 4px 8px rgba(0,0,0,0.2)',
             width: '100%',
-            maxWidth: '500px',
+            maxWidth: '600px',
             margin: '0 auto',
           }}
         >

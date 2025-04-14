@@ -14,7 +14,7 @@ const resources = {
       },
       "cotizar": {
         "titulo": "SAFE TRANSPORTATION FOR YOUR VEHICLE",
-        "subtitulo": "Compare with Us and Make Smart Decisions!",
+        "subtitulo": "Your vehicle in expert hands!",
         "formulario": {
           "titulo": "Get a Free Quote",
           "envioDesde": "Shipping from",
@@ -199,7 +199,7 @@ const resources = {
       },
       "cotizar": {
         "titulo": "TRANSPORTE SEGURO PARA TU VEHÍCULO",
-        "subtitulo": "¡Compara con Nosotros y Toma Decisiones Inteligentes!",
+        "subtitulo": "¡Tu Vehículo en manos expertas!",
         "formulario": {
           "titulo": "Cotiza Gratis",
           "envioDesde": "Envío desde",
