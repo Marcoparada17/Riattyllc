@@ -13,19 +13,19 @@ const AboutUs = () => {
         </Col>
       </Row>
       
-      <Row className="align-items-center">
-        <Col md={6} className="mb-4 mb-md-0">
+      <Row className="align-items-center ">
+        <Col md={6} className="mb-4 mb-md-0 ">
           <Image 
             src="../images/about-us.jpg" 
             alt="Riatty LLC car transport" 
             fluid 
             rounded 
-            className="shadow"
+            className="shadow "
           />
         </Col>
         
         <Col md={6}>
-          <div className="p-4 bg-light rounded shadow-sm">
+          <div className="p-4 bg-light rounded shadow-sm g-0">
             <h2 className="mb-4 ">{t('aboutUs.subtitle')}</h2>
             <p className="lead text-justify-custom">{t('aboutUs.intro')}</p>
             <p className='text-justify-custom'>{t('aboutUs.description1')}</p>
@@ -37,7 +37,7 @@ const AboutUs = () => {
       
       <Row className="mt-5">
         <Col>
-          <div className="p-4 bg-primary text-white rounded shadow text-center">
+          <div className="p-4 bg-primary text-white rounded shadow text-center ">
             <h3>{t('aboutUs.whyChooseUs')}</h3>
             <ul className="list-unstyled">
               <li className="mb-2">✓ {t('aboutUs.benefit1')}</li>
