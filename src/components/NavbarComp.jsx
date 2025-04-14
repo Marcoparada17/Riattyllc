@@ -38,7 +38,7 @@ function NavbarComp() {
       <Container>
         <Navbar.Brand href="/">
           <img
-            src="../../images/Riatty.png"
+            src="../../images/RiattyNavbar.png"
             width="140"
             height="auto"
             className="d-inline-block align-top mb-2"
@@ -77,7 +77,7 @@ function NavbarComp() {
               {t('navbar.contact')}
             </Nav.Link>
 
-            <Button variant="outline-light" style={{ backgroundColor: 'rgb(58, 162, 248)', borderColor: '#1F43B2' }}>
+            <Button variant="outline-light" style={{ backgroundColor: 'rgb(13, 110, 254)', borderColor: '#1F43B2' }}>
               {t('navbar.quote')}
             </Button>
 

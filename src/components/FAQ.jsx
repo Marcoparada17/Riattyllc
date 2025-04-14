@@ -29,49 +29,70 @@ const AccordionComponent = () => {
 
   return (
     <div
-      className="faq-section text-white px-5"
-      id="faq"
-      style={{
-        backgroundImage: "url('/images/faqs.jpg')",
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        width: '100%',
-      }}
-    >
-      <Row>
-        <h2 className="faq-title font-inter text-white">{t('faq.title')}</h2>
+    className="faq-section position-relative text-white px-5 py-5"
+    id="faq"
+    style={{
+      backgroundImage: "url('/images/faqs.jpg')",
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat',
+      backgroundAttachment: 'fixed', // ¡Esto es lo importante!
+      width: '100%',
+      minHeight: '100vh', // Mantiene el alto de la ventana
+    }}
+  >
+  
+      {/* Overlay oscuro */}
+      <div
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          height: '100%',
+          width: '100%',
+          backgroundColor: 'rgba(0, 0, 0, 0.1)',
+          zIndex: 1,
+        }}
+      />
 
-        {/* Columna Izquierda */}
-        <Col md={6} className="accordion-column px-4">
-          {leftQuestions.map((item, index) => (
-            <div key={index} className={`accordion-item ${openIndexLeft === index ? 'open' : ''}`}>
-              <div className="accordion-title ms-3" onClick={() => setOpenIndexLeft(openIndexLeft === index ? null : index)}>
-                {item.title}
-                <span className="accordion-icon">{openIndexLeft === index ? '-' : '+'}</span>
-              </div>
-              {openIndexLeft === index && (
-                <div className="accordion-content ms-3">{item.content}</div>
-              )}
-            </div>
-          ))}
-        </Col>
+      {/* Contenido con acordeones */}
+      <div style={{ position: 'relative', zIndex: 2 }}>
+        <Row>
+          <h2 className="faq-title font-inter text-white mb-4 text-center">{t('faq.title')}</h2>
+        </Row>
 
-        {/* Columna Derecha */}
-        <Col md={6} className="accordion-column px-4">
-          {rightQuestions.map((item, index) => (
-            <div key={index} className={`accordion-item ${openIndexRight === index ? 'open' : ''}`}>
-              <div className="accordion-title ms-3" onClick={() => setOpenIndexRight(openIndexRight === index ? null : index)}>
-                {item.title}
-                <span className="accordion-icon">{openIndexRight === index ? '-' : '+'}</span>
+        <Row>
+          {/* Columna Izquierda */}
+          <Col md={6} className="accordion-column px-4">
+            {leftQuestions.map((item, index) => (
+              <div key={index} className={`accordion-item ${openIndexLeft === index ? 'open' : ''}`}>
+                <div className="accordion-title ms-3" onClick={() => setOpenIndexLeft(openIndexLeft === index ? null : index)}>
+                  {item.title}
+                  <span className="accordion-icon">{openIndexLeft === index ? '-' : '+'}</span>
+                </div>
+                {openIndexLeft === index && (
+                  <div className="accordion-content ms-3">{item.content}</div>
+                )}
               </div>
-              {openIndexRight === index && (
-                <div className="accordion-content ms-3">{item.content}</div>
-              )}
-            </div>
-          ))}
-        </Col>
-      </Row>
+            ))}
+          </Col>
+
+          {/* Columna Derecha */}
+          <Col md={6} className="accordion-column px-4">
+            {rightQuestions.map((item, index) => (
+              <div key={index} className={`accordion-item ${openIndexRight === index ? 'open' : ''}`}>
+                <div className="accordion-title ms-3" onClick={() => setOpenIndexRight(openIndexRight === index ? null : index)}>
+                  {item.title}
+                  <span className="accordion-icon">{openIndexRight === index ? '-' : '+'}</span>
+                </div>
+                {openIndexRight === index && (
+                  <div className="accordion-content ms-3">{item.content}</div>
+                )}
+              </div>
+            ))}
+          </Col>
+        </Row>
+      </div>
     </div>
   );
 };

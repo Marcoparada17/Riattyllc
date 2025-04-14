@@ -9,7 +9,7 @@ const AboutUs = () => {
     <Container className="my-5" id="aboutus">
       <Row className="mb-4">
         <Col>
-          <h1 className="display-4 text-center font-inter text-bold1">{t('aboutUs.title')}</h1>
+          <h1 className=" text-center font-inter text-bold2">{t('aboutUs.title')}</h1>
         </Col>
       </Row>
       

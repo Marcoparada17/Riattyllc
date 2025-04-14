@@ -37,55 +37,64 @@ const Cotizar = () => {
     }
   }, []);
 
-  return ( 
-    <div id='home' className='bg-home' style={{
-      backgroundImage: 'linear-gradient(180deg, rgba(4, 2, 29, 0) 0%,rgb(4, 2, 29) 96%), url("/images/bgpick.jpg")', 
+ return (
+  <div
+    id="home"
+    className="bg-home"
+    style={{
+      backgroundImage:
+        'linear-gradient(180deg, rgba(4, 2, 29, 0) 0%, rgb(4, 2, 29) 96%), url("/images/bgpick.jpg")',
       backgroundPosition: 'center',
       backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat',
+      minHeight: '100vh',
+      padding: '4rem 1rem',
       display: 'flex',
-      justifyContent: 'center',
       alignItems: 'center',
-      width: 'auto',
-      height: 'auto',
-      margin: 0,
-      padding: 0
-    }}>
-      <Row className="d-flex align-items-center g-0" style={{ width: '90%' }}> 
-        <Col md={6} className="px-5">
-          <h1 style={{
+    }}
+  >
+    <Row className="align-items-center justify-content-center w-100 g-0">
+      {/* Texto Izquierdo */}
+      <Col xs={12} md={6} className="text-center text-md-start px-3 px-md-5 mb-4 mb-md-0">
+        <h1
+          style={{
             fontFamily: 'Inter',
             fontWeight: 700,
             fontSize: '2.5rem',
-            lineHeight: '1em',
             color: '#FFFFFF',
-            position: 'relative',
-            zIndex: 2,
-            marginTop: '8rem',
-            textAlign: 'center'
-          }}>
-            {t("cotizar.titulo")}
-          </h1>
-          <p style={{
-            fontSize: '1.5rem',
-            lineHeight: '1.2em',
-            fontWeight: 'normal',
+          }}
+        >
+          {t('cotizar.titulo')}
+        </h1>
+        <p
+          style={{
+            fontSize: '1.2rem',
+            lineHeight: '1.5em',
             color: '#FFFFFF',
-            position: 'relative',
-            zIndex: 2,
-            marginTop: '20px',
-            textAlign: 'center'
-          }}>
-            {t("cotizar.subtitulo")}
-          </p>
-        </Col>
-        <Col md={6} className="p-5 ">
-          <Card style={{ minHeight: '500px', padding: '20px', borderRadius: '15px', boxShadow: '0 4px 8px rgba(0,0,0,0.2)' }}>
-            <Card.Body>
-              <Card.Title className="text-center font-inter" style={{ fontSize: '1.8rem', fontWeight: 'bold' }}>
-                {t("cotizar.formulario.titulo")}
-              </Card.Title>
-              <Form>
+            marginTop: '1rem',
+          }}
+        >
+          {t('cotizar.subtitulo')}
+        </p>
+      </Col>
+
+      {/* Formulario a la derecha */}
+      <Col xs={12} md={6} className="px-3 px-md-5">
+        <Card
+          style={{
+            padding: '20px',
+            borderRadius: '15px',
+            boxShadow: '0 4px 8px rgba(0,0,0,0.2)',
+            width: '100%',
+            maxWidth: '500px',
+            margin: '0 auto',
+          }}
+        >
+          <Card.Body>
+            <Card.Title className="text-center font-inter" style={{ fontSize: '1.8rem', fontWeight: 'bold' }}>
+              {t('cotizar.formulario.titulo')}
+            </Card.Title>
+                 <Form>
                 <Form.Group controlId="envioDesde" className="mb-3">
                   <Form.Label>{t("cotizar.formulario.envioDesde")}</Form.Label>
                   <Form.Control 

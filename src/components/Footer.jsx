@@ -59,7 +59,7 @@ const Footer = () => {
               <a href='https://www.facebook.com/tuempresa' target='_blank' rel='noopener noreferrer'>
                 <img src='../../images/facebook.png' className='footer-icon' alt='Facebook' />
               </a>
-              <a href='https://www.instagram.com/tuempresa' target='_blank' rel='noopener noreferrer'>
+              <a href='https://www.instagram.com/riattyllc?igsh=MXF3eDFsc2hyajFydA==' target='_blank' rel='noopener noreferrer'>
                 <img src='../../images/instagram.png' className='footer-icon' alt='Instagram' />
               </a>
             </div>
