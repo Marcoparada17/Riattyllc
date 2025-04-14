@@ -56,7 +56,7 @@ const Footer = () => {
               </a>
             </div>
             <div className='d-flex gap-3 mt-3 px-3'>
-              <a href='https://www.facebook.com/tuempresa' target='_blank' rel='noopener noreferrer'>
+              <a href='https://www.facebook.com/share/15w2QP5k4J/' target='_blank' rel='noopener noreferrer'>
                 <img src='../../images/facebook.png' className='footer-icon' alt='Facebook' />
               </a>
               <a href='https://www.instagram.com/riattyllc?igsh=MXF3eDFsc2hyajFydA==' target='_blank' rel='noopener noreferrer'>
