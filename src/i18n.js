@@ -14,7 +14,7 @@ const resources = {
       },
       "cotizar": {
         "titulo": "SAFE TRANSPORTATION FOR YOUR VEHICLE",
-        "subtitulo": "Your vehicle in expert hands!",
+        "subtitulo": "Your vehicle in expert hands!<br />Your car, our responsibility. Get a free quote today.",
         "formulario": {
           "titulo": "Get a Free Quote",
           "envioDesde": "Shipping from",
@@ -29,7 +29,10 @@ const resources = {
           "placeholderVehiculo": "Make and model",
           "anio": "Year",
           "placeholderAnio": "Vehicle year",
-          "boton": "Get a Quote"
+          "boton": "Get a Quote",
+          "estado": "Vehicle condition",
+          "runs": "Runs and Drives",
+          "inop": "Inop (Inoperable)"
         }
       },
       "review": {
@@ -184,6 +187,13 @@ const resources = {
   }
 },
 
+"gracias": {
+  "thank_you": "Thank you! We've received your information.",
+  "transporters_contact": "Soon, transporters will contact you so you can choose the best option.",
+  "return_home": "Back to the main page"
+}
+
+
 
     }
   },
@@ -199,7 +209,7 @@ const resources = {
       },
       "cotizar": {
         "titulo": "TRANSPORTE SEGURO PARA TU VEHÍCULO",
-        "subtitulo": "¡Tu Vehículo en manos expertas!",
+        "subtitulo": "¡Tu vehículo en manos expertas!</br >Tu auto, nuestra responsabilidad. Solicita una cotización gratis hoy.",
         "formulario": {
           "titulo": "Cotiza Gratis",
           "envioDesde": "Envío desde",
@@ -214,7 +224,10 @@ const resources = {
           "placeholderVehiculo": "Marca y modelo",
           "anio": "Año",
           "placeholderAnio": "Año del vehículo",
-          "boton": "Cotizar"
+          "boton": "Cotizar",
+          "estado": "Condición del vehículo",
+          "runs": "Funciona y se conduce",
+          "inop": "Inop (Inoperable)"
         }
       },
       "review": {
@@ -370,7 +383,11 @@ const resources = {
   }
 },
 
-
+"gracias": {
+  "thank_you": "¡Gracias! Hemos recibido la información.",
+  "transporters_contact": "Pronto lo contactarán los transportistas para que usted escoja la mejor opción.",
+  "return_home": "Volver a la página principal"
+},
 
     }
   }

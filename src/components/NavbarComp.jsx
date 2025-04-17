@@ -16,6 +16,10 @@ function NavbarComp() {
   const currentLanguage = i18n.language || 'es';
   const { name, flag } = languages[currentLanguage] || languages['es'];
 
+  const goToHome = () => {
+    navigate('/');
+  };
+
   const scrollToSection = (id) => {
     if (location.pathname !== '/') {
       navigate('/');
@@ -76,8 +80,11 @@ function NavbarComp() {
             <Nav.Link onClick={() => scrollToSection('contact')} className='text-font1 me-4'>
               {t('navbar.contact')}
             </Nav.Link>
-
-            <Button variant="outline-light" style={{ backgroundColor: 'rgb(13, 110, 254)', borderColor: '#1F43B2' }}>
+            <Button
+              variant="outline-light"
+              style={{ backgroundColor: 'rgb(13, 110, 254)', borderColor: '#1F43B2' }}
+              onClick={goToHome} // Se modificó aquí para redirigir al home
+            >
               {t('navbar.quote')}
             </Button>
 
