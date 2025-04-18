@@ -44,6 +44,7 @@ const AboutUs = () => {
               <li className="mb-2">✓ {t('aboutUs.benefit2')}</li>
               <li className="mb-2">✓ {t('aboutUs.benefit3')}</li>
               <li className="mb-2">✓ {t('aboutUs.benefit4')}</li>
+              <li className="mb-2">✓ {t('aboutUs.benefit5')}</li>
             </ul>
           </div>
         </Col>

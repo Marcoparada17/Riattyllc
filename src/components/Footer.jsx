@@ -51,8 +51,8 @@ const Footer = () => {
               </a>
             </div>
             <div className='contact-button ms-2'>
-              <a href='mailto:info@riatty.com' className='btn text-white '>
-                Soporte@riatty.com
+              <a href='mailto:sales@riatty.com' className='btn text-white '>
+                Sales@riatty.com
               </a>
             </div>
             <div className='d-flex gap-3 mt-3 px-3'>
@@ -73,7 +73,7 @@ const Footer = () => {
         <Row className='justify-content-center'>
           <Col md='auto' className='f-text2 d-flex justify-content-center align-items-center gap-4 flex-wrap text-center'>
             <div>Llámanos al <a href='tel:+1000000000' className='text-white text-decoration-underline'>(1) 000-000-000</a></div>
-            <div><a href='mailto:Soporte@RiattyLLC.com' className='text-white text-decoration-underline'>Soporte@RiattyLLC.com</a></div>
+            <div><a href='mailto:info@RiattyLLC.com' className='text-white text-decoration-underline'>Info@RiattyLLC.com</a></div>
             <div>©2025 Riatty LLC</div>
             <div><a href='/privacy' className='text-white text-decoration-underline'>Privacy Policy</a></div>
             

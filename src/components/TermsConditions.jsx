@@ -102,10 +102,10 @@ const TextPage = () => {
           <p className='align-items-center ms-3 mb-3'>This contract supersedes all prior written or oral representation of Riatty LLC. and constitutes the entire agreement between customer and Riatty LLC ("The Auto Transport Broker") and may not be changed except in writing signed by an officer of Riatty LLC ("The Auto Transport Broker"),  Customer warrants that he, she, or it has read this agreement in its entirety and by continuing with the transaction fully understands and agrees to its terms.</p>
           <p className='align-items-center ms-3 mb-3'>Further, Customer waives any claims or defenses based in whole or in part on not reading, knowing, or understanding these terms and conditions and agrees to indemnify and hold harmless Riatty LLC  ("The Auto Transport Broker") for any fees or costs, including attorney’s fees and costs, arising out of any claims or defenses asserted based upon not reading, having knowledge of, or understanding these terms and conditions. Riatty LLC</p>
 
-          <div style={{backgroundColor: '#EEF4D2'}} className='text-center'>
-                <h3 className='mb-5'>¿Necesitas más información?</h3>
+          <div style={{backgroundColor: '#FFF'}} className='text-center'>
+                <h3 className='mb-5 '>¿Necesitas más información?</h3>
 
-                <Button variant="outline-light" className='nav-button mb-5' style={{justifyContent: 'center', width: '75%' }}>
+                <Button variant="outline-light" className='bg-primary nav-button mb-5' style={{justifyContent: 'center', width: '50%' }}>
                   LLamar al (1) 000-000-0000
                  </Button>
           </div>

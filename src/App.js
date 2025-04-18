@@ -16,6 +16,7 @@ import TermsConditions from './components/TermsConditions'
 import AboutUs from './components/About';
 import PrivacyPolicy from './components/Politics';
 import TrackVehicle from './components/TrackVehicle';
+import ScrollToTop from './components/ScrollToTop';
 import './i18n'; // Importa la configuración de idiomas
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
@@ -46,6 +47,10 @@ function App() {
           <Route path='/index' element={<Index/>}/>
           <Route path='/track' element={<TrackVehicle/>}/>
             </Routes>
+
+     {/* Scroll to top button */}
+     <ScrollToTop />
+
       <Footer/>
       <FooterMobile/>
     </div>

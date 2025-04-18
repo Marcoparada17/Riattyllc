@@ -22,11 +22,18 @@ const resources = {
           "envioHasta": "To",
           "placeholderHasta": "Destination city",
           "correo": "Email",
+          "marca": "Make",
+          "modelo": "Model",
+          "tipo": "Vehicle type",
+          "selectMarca": "Select a make",
+          "selectModelo": "Select a model",
+          "selectTipo": "Select a type",
+          "selectAnio": "Select a year",
           "placeholderCorreo": "Your email",
           "numeroContacto": "Contact Number",
           "placeholderNumero": "Your contact number",
           "vehiculo": "Vehicle",
-          "placeholderVehiculo": "Make and model",
+          "placeholderVehiculo": "model",
           "anio": "Year",
           "placeholderAnio": "Vehicle year",
           "boton": "Get a Quote",
@@ -150,9 +157,10 @@ const resources = {
     "mission": "Our mission is to simplify the vehicle transport process by providing exceptional service that exceeds our customers' expectations.",
     "whyChooseUs": "Why Choose Riatty LLC?",
     "benefit1": "3+ years of vehicle transport experience",
-    "benefit2": "Coverage in all 48 contiguous U.S. states",
+    "benefit2": "Coverage in all contiguous U.S. states",
     "benefit3": "Full insurance coverage for your peace of mind",
-    "benefit4": "24/7 customer support throughout transport"
+    "benefit4": "24/7 customer support throughout transport",
+    "benefit5": "track your vehicle in real time"
   },
 
 "privacy": {
@@ -217,11 +225,18 @@ const resources = {
           "envioHasta": "Hasta",
           "placeholderHasta": "Ciudad de destino",
           "correo": "Correo",
+          "marca": "Marca",
+          "modelo": "Modelo",
+          "tipo": "Tipo de vehículo",
+          "selectMarca": "Selecciona una marca",
+          "selectModelo": "Selecciona un modelo",
+          "selectTipo": "Selecciona un tipo",
+          "selectAnio": "Selecciona un año",
           "placeholderCorreo": "Tu correo electrónico",
           "numeroContacto": "Número de Contacto",
           "placeholderNumero": "Tu número de contacto",
           "vehiculo": "Vehículo",
-          "placeholderVehiculo": "Marca y modelo",
+          "placeholderVehiculo": " modelo",
           "anio": "Año",
           "placeholderAnio": "Año del vehículo",
           "boton": "Cotizar",
@@ -287,7 +302,7 @@ const resources = {
 
       "footer" :{
         "cotiza":"Cotiza",
-        "terms": "Terminos&Condiciones",
+        "terms": "Terminos & Condiciones",
         "description": "Soluciones confiables y accesibles para el transporte de vehículos, diseñadas para clientes particulares y empresas en todo Estados Unidos."
       },
 
@@ -346,9 +361,10 @@ const resources = {
     "mission": "Nuestra misión es simplificar el proceso de transporte de vehículos, proporcionando un servicio excepcional que supere las expectativas de nuestros clientes.",
     "whyChooseUs": "¿Por qué elegir Riatty LLC?",
     "benefit1": "Más de 3 años de experiencia en transporte de vehículos",
-    "benefit2": "Cobertura en los 48 estados contiguos de EE.UU.",
+    "benefit2": "Cobertura en todo los estados de EE.UU.",
     "benefit3": "Seguro completo para su tranquilidad",
-    "benefit4": "Soporte al cliente 24/7 durante todo el transporte"
+    "benefit4": "Soporte al cliente 24/7 durante todo el transporte",
+    "benefit5": "Rastrea tu vehiculo en tiempo real."
   },
 
 "privacy": {
