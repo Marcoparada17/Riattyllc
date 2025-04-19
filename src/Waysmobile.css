@@ -8,10 +8,10 @@
   }
   
   .ways-mobile-icon {
-    flex: 0 0 15%;
+    flex: 0 0 10%;
     display: flex;
     justify-content: center;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
   }
   
   .ways-mobile-icon img {
