@@ -122,9 +122,11 @@ const Cotizar = () => {
           <h1 style={{ fontFamily: 'Inter', fontWeight: 700, fontSize: '2.5rem', color: '#FFFFFF' }}>
             {t('cotizar.titulo')}
           </h1>
-          <p style={{ fontSize: '1.2rem', lineHeight: '1.5em', color: '#FFFFFF', marginTop: '1rem' }}>
-            {t('cotizar.subtitulo')}
-          </p>
+          <p
+  style={{ fontSize: '1.2rem', lineHeight: '1.5em', color: '#FFFFFF', marginTop: '1rem' }}
+  dangerouslySetInnerHTML={{ __html: t('cotizar.subtitulo') }}
+></p>
+
         </Col>
 
         <Col xs={12} md={6} className="px-3 px-md-2">
