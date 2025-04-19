@@ -17,6 +17,7 @@ import AboutUs from './components/About';
 import PrivacyPolicy from './components/Politics';
 import TrackVehicle from './components/TrackVehicle';
 import ScrollToTop from './components/ScrollToTop';
+import WaysMobile from './components/WaysMobile';
 import './i18n'; // Importa la configuración de idiomas
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
@@ -37,6 +38,7 @@ function App() {
             <Step/>
             <AccordionComponent/>
             <Ways/>
+            <WaysMobile/>
           </>} />
           <Route path="#home" element={<Index />} />
           <Route path="#Review" element={<Review />} />

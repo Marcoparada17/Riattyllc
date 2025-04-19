@@ -1,5 +1,6 @@
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
+import '../Ways.css'
 
 
 const Ways = () => {
@@ -15,11 +16,11 @@ const Ways = () => {
   ];
 
   return (
-    <div className="text-center bg-primary font-monserrat align-content-center">
-      <Row className=' g-0'>
+    <div className="text-center bg-primary font-monserrat align-content-center ">
+      <Row className=' g-0 ways-desktop'>
         {images.map((image, index) => (
           <Col key={index} sm={12} md={2} className=''>
-            <img src={image.src} alt={image.alt} className="image-ways" />
+            <img src={image.src} alt={image.alt} className="" />
           </Col>
         ))}
       </Row>
