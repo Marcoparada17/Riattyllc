@@ -73,25 +73,29 @@ const Cotizar = () => {
     const model = form.modelo.value === "Other" ? customModel : form.modelo.value;
 
     const data = {
-      name: form.numeroContacto.value,
-      email: form.correo.value,
-      phone: form.numeroContacto.value,
-      vehicle: `${make} ${model} ${form.anio.value}`,
-      type: form.tipo.value,
-      pickup: form.envioDesde.value,
-      dropoff: form.envioHasta.value,
-      condition: form.estadoVehiculo.value,
-      note: 'Cotización desde formulario web',
-      ref: 'TU_AUTHCODE_AQUI'
+      fields: {
+        TITLE: 'Cotización desde Web',
+        NAME: form.numeroContacto.value,
+        PHONE: [{ VALUE: form.numeroContacto.value, TYPE: 'MOBILE' }],
+        EMAIL: [{ VALUE: form.correo.value, TYPE: 'WORK' }],
+        COMMENTS: `
+          Vehículo: ${make} ${model} ${form.anio.value}
+          Tipo: ${form.tipo.value}
+          Desde: ${form.envioDesde.value}
+          Hasta: ${form.envioHasta.value}
+          Estado: ${form.estadoVehiculo.value}
+        `,
+        SOURCE_ID: 'WEB',
+      }
     };
-
+  
     try {
-      const response = await fetch('https://leadform.batscrm.com/api/lead', {
+      const response = await fetch('https://b24-d638ud.bitrix24.eu/rest/1/x8k5i7ghyicrffjs/crm.lead.add.json', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
       });
-
+  
       if (response.ok) {
         navigate('/gracias');
       } else {
