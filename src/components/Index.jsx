@@ -141,78 +141,113 @@ const Cotizar = () => {
               </Card.Title>
 
               <Form onSubmit={handleSubmit}>
-                <Form.Group controlId="envioDesde" className="mb-3">
-                  <Form.Label>{t("cotizar.formulario.envioDesde")}</Form.Label>
-                  <Form.Control ref={desdeInputRef} name="envioDesde" type="text" required />
-                </Form.Group>
 
-                <Form.Group controlId="envioHasta" className="mb-3">
-                  <Form.Label>{t("cotizar.formulario.envioHasta")}</Form.Label>
-                  <Form.Control ref={hastaInputRef} name="envioHasta" type="text" required />
-                </Form.Group>
 
-                <Form.Group controlId="correo" className="mb-3">
-                  <Form.Label>{t("cotizar.formulario.correo")}</Form.Label>
-                  <Form.Control name="correo" type="email" required />
-                </Form.Group>
+  <Form.Group className='mb-3'>
+    <Row>
+      <Col md={6}>
+      <Form.Label>{t("cotizar.formulario.nombre")}</Form.Label>
+      <Form.Control name="nombre" type="text" required />
+      </Col>
+      <Col md={6}>
+      <Form.Label>{t("cotizar.formulario.apellido")}</Form.Label>
+      <Form.Control name="apellido" type="text" required />
+      </Col>
+    </Row>
+  </Form.Group>
 
-                <Form.Group controlId="numeroContacto" className="mb-3">
-                  <Form.Label>{t("cotizar.formulario.numeroContacto")}</Form.Label>
-                  <Form.Control name="numeroContacto" type="tel" required />
-                </Form.Group>
 
-                <Form.Group controlId="marca" className="mb-3">
-                  <Form.Label>{t("cotizar.formulario.marca")}</Form.Label>
-                  <Form.Select name="marca" value={selectedMake} onChange={(e) => setSelectedMake(e.target.value)} required>
-                    <option value="">{t("cotizar.formulario.selectMarca")}</option>
-                    {uniqueMakes.map((make, i) => <option key={i} value={make}>{make}</option>)}
-                    <option value="Other">Other</option>
-                  </Form.Select>
-                  {selectedMake === "Other" && (
-                    <Form.Control className="mt-2" type="text" name="customMake" placeholder={t("")} onChange={(e) => setCustomMake(e.target.value)} required />
-                  )}
-                </Form.Group>
+  {/* Correo + Teléfono */}
+  <Form.Group className="mb-3">
+    <Row>
+      <Col md={6}>
+        <Form.Label>{t("cotizar.formulario.correo")}</Form.Label>
+        <Form.Control name="correo" type="email" required />
+      </Col>
+      <Col md={6}>
+        <Form.Label>{t("cotizar.formulario.numeroContacto")}</Form.Label>
+        <Form.Control name="numeroContacto" type="tel" required />
+      </Col>
+    </Row>
+  </Form.Group>
 
-                <Form.Group controlId="modelo" className="mb-3">
-                  <Form.Label>{t("cotizar.formulario.modelo")}</Form.Label>
-                  <Form.Select name="modelo" required>
-                    <option value="">{t("cotizar.formulario.selectModelo")}</option>
-                    {uniqueModels.map((model, i) => <option key={i} value={model}>{model}</option>)}
-                    <option value="Other">Other</option>
-                  </Form.Select>
-                  {customMake && (
-                    <Form.Control className="mt-2" type="text" name="customModel" placeholder={t("")} onChange={(e) => setCustomModel(e.target.value)} required />
-                  )}
-                </Form.Group>
+  {/* Envío Desde + Hasta */}
+  <Form.Group className="mb-3">
+    <Row>
+      <Col md={6}>
+        <Form.Label>{t("cotizar.formulario.envioDesde")}</Form.Label>
+        <Form.Control ref={desdeInputRef} name="envioDesde" type="text" required />
+      </Col>
+      <Col md={6}>
+        <Form.Label>{t("cotizar.formulario.envioHasta")}</Form.Label>
+        <Form.Control ref={hastaInputRef} name="envioHasta" type="text" required />
+      </Col>
+    </Row>
+  </Form.Group>
 
-                <Form.Group controlId="tipo" className="mb-3">
-                  <Form.Label>{t("cotizar.formulario.tipo")}</Form.Label>
-                  <Form.Select name="tipo" required>
-                    <option value="">{t("cotizar.formulario.selectTipo")}</option>
-                    {vehicleTypes.map((type, i) => <option key={i} value={type}>{type}</option>)}
-                  </Form.Select>
-                </Form.Group>
+  {/* Marca + Modelo + Tipo + Año */}
+  <Form.Group className="mb-3">
+    <Row>
+      <Col md={3}>
+        <Form.Label>{t("cotizar.formulario.marca")}</Form.Label>
+        <Form.Select name="marca" value={selectedMake} onChange={(e) => setSelectedMake(e.target.value)} required>
+          <option value="">{t("cotizar.formulario.selectMarca")}</option>
+          {uniqueMakes.map((make, i) => <option key={i} value={make}>{make}</option>)}
+          <option value="Other">Other</option>
+        </Form.Select>
+        {selectedMake === "Other" && (
+          <Form.Control className="mt-2" type="text" name="customMake" placeholder={t("cotizar.formulario.inputMarca")} onChange={(e) => setCustomMake(e.target.value)} required />
+        )}
+      </Col>
 
-                <Form.Group controlId="anio" className="mb-3">
-                  <Form.Label>{t("cotizar.formulario.anio")}</Form.Label>
-                  <Form.Select name="anio" required>
-                    <option value="">{t("cotizar.formulario.selectAnio")}</option>
-                    {uniqueYears.map((year, i) => <option key={i} value={year}>{year}</option>)}
-                  </Form.Select>
-                </Form.Group>
+      <Col md={3}>
+        <Form.Label>{t("cotizar.formulario.modelo")}</Form.Label>
+        <Form.Select name="modelo" required>
+          <option value="">{t("cotizar.formulario.selectModelo")}</option>
+          {uniqueModels.map((model, i) => <option key={i} value={model}>{model}</option>)}
+          <option value="Other">Other</option>
+        </Form.Select>
+        {customMake && (
+          <Form.Control className="mt-2" type="text" name="customModel" placeholder={t("cotizar.formulario.inputModelo")} onChange={(e) => setCustomModel(e.target.value)} required />
+        )}
+      </Col>
 
-                <Form.Group controlId="estadoVehiculo" className="mb-4">
-                  <Form.Label>{t("cotizar.formulario.estado")}</Form.Label>
-                  <div className="d-flex gap-4 mt-2">
-                    <Form.Check type="radio" label={t("cotizar.formulario.runs")} name="estadoVehiculo" value="runs" required />
-                    <Form.Check type="radio" label={t("cotizar.formulario.inop")} name="estadoVehiculo" value="inop" required />
-                  </div>
-                </Form.Group>
+      <Col md={3}>
+        <Form.Label>{t("cotizar.formulario.tipo")}</Form.Label>
+        <Form.Select name="tipo" required>
+          <option value="">{t("cotizar.formulario.selectTipo")}</option>
+          {vehicleTypes.map((type, i) => (
+            <option key={i} value={type}>{type}</option>
+          ))}
+        </Form.Select>
+      </Col>
 
-                <Button variant="primary" type="submit" style={{ width: '100%', fontSize: '1.2rem' }}>
-                  {t("cotizar.formulario.boton")}
-                </Button>
-              </Form>
+      <Col md={3}>
+        <Form.Label>{t("cotizar.formulario.anio")}</Form.Label>
+        <Form.Select name="anio" required>
+          <option value="">{t("cotizar.formulario.selectAnio")}</option>
+          {uniqueYears.map((year, i) => (
+            <option key={i} value={year}>{year}</option>
+          ))}
+        </Form.Select>
+      </Col>
+    </Row>
+  </Form.Group>
+
+  {/* Estado del vehículo */}
+  <Form.Group controlId="estadoVehiculo" className="mb-4">
+    <Form.Label>{t("cotizar.formulario.estado")}</Form.Label>
+    <div className="d-flex gap-4 mt-2">
+      <Form.Check type="radio" label={t("cotizar.formulario.runs")} name="estadoVehiculo" value="runs" required />
+      <Form.Check type="radio" label={t("cotizar.formulario.inop")} name="estadoVehiculo" value="inop" required />
+    </div>
+  </Form.Group>
+
+  <Button variant="primary" type="submit" style={{ width: '100%', fontSize: '1.2rem' }}>
+    {t("cotizar.formulario.boton")}
+  </Button>
+</Form>
+
             </Card.Body>
           </Card>
         </Col>

@@ -39,7 +39,9 @@ const resources = {
           "boton": "Get a Quote",
           "estado": "Vehicle condition",
           "runs": "Runs and Drives",
-          "inop": "Inop (Inoperable)"
+          "inop": "Inop (Inoperable)",
+          "nombre": "Name",
+          "apellido": "Last Name"
         }
       },
       "review": {
@@ -242,7 +244,10 @@ const resources = {
           "boton": "Cotizar",
           "estado": "Condición del vehículo",
           "runs": "Funciona y se conduce",
-          "inop": "Inop (Inoperable)"
+          "inop": "Inop (Inoperable)",
+          "nombre": "Nombre",
+          "apellido": "Apellido"
+
         }
       },
       "review": {
