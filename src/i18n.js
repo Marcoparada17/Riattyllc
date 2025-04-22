@@ -41,7 +41,13 @@ const resources = {
           "runs": "Runs and Drives",
           "inop": "Inop (Inoperable)",
           "nombre": "Name",
-          "apellido": "Last Name"
+          "apellido": "Last Name",
+          "seccion1": "Contact Information",
+          "seccion2": "Shipping Information",
+          "seccion3": "Vehicle Information",
+          "siguiente": "Next",
+          "anterior": "Previous"
+
         }
       },
       "review": {
@@ -246,7 +252,13 @@ const resources = {
           "runs": "Funciona y se conduce",
           "inop": "Inop (Inoperable)",
           "nombre": "Nombre",
-          "apellido": "Apellido"
+          "apellido": "Apellido",
+          "seccion1": "Información de contacto",
+          "seccion2": "Información de envío",
+          "seccion3": "Datos del vehículo",
+          "siguiente": "Siguiente",
+          "anterior": "Anterior"
+
 
         }
       },
