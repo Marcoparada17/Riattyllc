@@ -18,18 +18,25 @@ const Cotizar = () => {
   const [customModel, setCustomModel] = useState('');
   const [uniqueYears, setUniqueYears] = useState([]);
 
-  const [formData, setFormData] = useState({
-    nombre: '',
-    numeroContacto: '',
-    correo: '',
-    envioDesde: '',
-    envioHasta: '',
-    estadoVehiculo: '',
-    marca: '',
-    modelo: '',
-    tipo: '',
-    anio: '',
+  const [formData, setFormData] = useState(() => {
+    const savedFormData = localStorage.getItem('formData');
+    return savedFormData ? JSON.parse(savedFormData) : {
+      nombre: '',
+      numeroContacto: '',
+      correo: '',
+      envioDesde: '',
+      envioHasta: '',
+      estadoVehiculo: '',
+      marca: '',
+      modelo: '',
+      tipo: '',
+      anio: '',
+    };
   });
+
+  useEffect(() => {
+    localStorage.setItem('formData', JSON.stringify(formData));
+  }, [formData]);
 
   const vehicleTypes = [
     "Car", "Convertible", "Coupe", "Sedan", "SUV", "Pickup", "Van /MiniVan",
@@ -39,6 +46,18 @@ const Cotizar = () => {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleMakeChange = (e) => {
+    const value = e.target.value;
+    setSelectedMake(value);
+    setFormData(prev => ({ ...prev, marca: value }));
+    setFormData(prev => ({ ...prev, modelo: '' }));
+  };
+
+  const handleModelChange = (e) => {
+    const value = e.target.value;
+    setFormData(prev => ({ ...prev, modelo: value }));
   };
 
   useEffect(() => {
@@ -115,6 +134,7 @@ const Cotizar = () => {
       });
 
       if (response.ok) {
+        localStorage.removeItem('formData');
         navigate('/gracias');
       } else {
         alert('Error al enviar. Intenta nuevamente.');
@@ -275,10 +295,7 @@ const Cotizar = () => {
                           <Form.Select
                             name="marca"
                             value={selectedMake}
-                            onChange={(e) => {
-                              setSelectedMake(e.target.value);
-                              handleChange(e);
-                            }}
+                            onChange={handleMakeChange}
                             required
                           >
                             <option value="">{t("cotizar.formulario.selectMarca")}</option>
@@ -304,7 +321,7 @@ const Cotizar = () => {
                           <Form.Select
                             name="modelo"
                             value={formData.modelo}
-                            onChange={handleChange}
+                            onChange={handleModelChange}
                             required
                           >
                             <option value="">{t("cotizar.formulario.selectModelo")}</option>
