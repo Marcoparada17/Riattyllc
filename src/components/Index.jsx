@@ -18,25 +18,18 @@ const Cotizar = () => {
   const [customModel, setCustomModel] = useState('');
   const [uniqueYears, setUniqueYears] = useState([]);
 
-  const [formData, setFormData] = useState(() => {
-    const savedFormData = localStorage.getItem('formData');
-    return savedFormData ? JSON.parse(savedFormData) : {
-      nombre: '',
-      numeroContacto: '',
-      correo: '',
-      envioDesde: '',
-      envioHasta: '',
-      estadoVehiculo: '',
-      marca: '',
-      modelo: '',
-      tipo: '',
-      anio: '',
-    };
+  const [formData, setFormData] = useState({
+    nombre: '',
+    numeroContacto: '',
+    correo: '',
+    envioDesde: '',
+    envioHasta: '',
+    estadoVehiculo: '',
+    marca: '',
+    modelo: '',
+    tipo: '',
+    anio: '',
   });
-
-  useEffect(() => {
-    localStorage.setItem('formData', JSON.stringify(formData));
-  }, [formData]);
 
   const vehicleTypes = [
     "Car", "Convertible", "Coupe", "Sedan", "SUV", "Pickup", "Van /MiniVan",
@@ -52,6 +45,7 @@ const Cotizar = () => {
     const value = e.target.value;
     setSelectedMake(value);
     setFormData(prev => ({ ...prev, marca: value }));
+    // Reset model when make changes
     setFormData(prev => ({ ...prev, modelo: '' }));
   };
 
@@ -70,6 +64,17 @@ const Cotizar = () => {
       );
       desdeAutocomplete.setBounds(bounds);
       hastaAutocomplete.setBounds(bounds);
+
+      // Add place_changed event listeners
+      desdeAutocomplete.addListener('place_changed', () => {
+        const place = desdeAutocomplete.getPlace();
+        setFormData(prev => ({ ...prev, envioDesde: place.formatted_address }));
+      });
+
+      hastaAutocomplete.addListener('place_changed', () => {
+        const place = hastaAutocomplete.getPlace();
+        setFormData(prev => ({ ...prev, envioHasta: place.formatted_address }));
+      });
     }
 
     const fetchCars = async () => {
@@ -134,7 +139,6 @@ const Cotizar = () => {
       });
 
       if (response.ok) {
-        localStorage.removeItem('formData');
         navigate('/gracias');
       } else {
         alert('Error al enviar. Intenta nuevamente.');
